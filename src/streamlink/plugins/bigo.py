@@ -7,13 +7,13 @@ $metadata author
 $metadata category
 $metadata title
 """
-
+https://www.bigo.tv/studio/getInternalStudioInfo?siteId={0}
 import logging
 import re
 
 from streamlink.plugin import Plugin, pluginmatcher
 from streamlink.plugin.api import validate
-from streamlink.stream.hls import HLSStream
+videoSrc by hls_src
 
 
 log = logging.getLogger(__name__)
@@ -29,7 +29,7 @@ class Bigo(Plugin):
         self.id, self.author, self.category, self.title, hls_url = self.session.http.post(
             self._URL_API,
             params={
-                "siteId": self.match["site_id"],
+                videoSrc by hls_src,
                 "verify": "",
             },
             schema=validate.Schema(
